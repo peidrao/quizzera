@@ -1,0 +1,72 @@
+@import '../../../styles/global-styles.scss';
+
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -22rem;
+    width: 22rem;
+    background-color: $white;
+    color: $black;
+    height: 100%;
+    box-shadow: $box-shadow-16dp;
+    z-index: 100;
+    transition: all 300ms ease-in-out;
+    will-change: transform;
+}
+
+.drawerShow {
+    transform: translateX(100%);
+}
+
+.header {
+    height: $space-112;
+    padding: $space-16;
+    background-size: cover;
+    background-image: url('../../assets/logos/comFundo.png'); /* Imagem tubarao */
+}
+
+.links {
+    color: $black;
+    padding: $space-12;
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        margin-bottom: $space-12;
+    }
+}
+
+.selected {
+    div {
+        background-color: #f1707b;
+        border-radius: $space-4;
+        color: $primary-dark;
+        padding: $space-12;
+        /*  width: 100%; */
+    }
+}
+
+.anchor {
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+    will-change: transform;
+    color: $gray-700;
+}
+
+.unselected:hover {
+    background-color: #f1707b;
+    border-radius: $space-4;
+    color: #fff;
+    padding: $space-12;
+    width: 100%;
+}
+
+.unselected {
+    padding: $space-12;
+}
+
+.margin {
+    margin-right: $space-24;
+}

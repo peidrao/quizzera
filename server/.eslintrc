@@ -1,0 +1,28 @@
+{
+    "extends": [
+        "joaopedrodcf",
+        "plugin:node/recommended"
+    ],
+    "plugins": [
+        "jest"
+    ],
+    "env": {
+        "jest/globals": true
+    },
+    "rules": {
+        "camelcase": "off",
+        "no-underscore-dangle": "off",
+        "no-shadow": [
+            "error",
+            {
+                "allow": [
+                    "done",
+                    "err"
+                ]
+            }
+        ],
+        "consistent-return": [
+            "off"
+        ]
+    }
+}

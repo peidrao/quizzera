@@ -1,0 +1,107 @@
+@import '../../../../styles/global-styles.scss';
+
+.wrapper {
+    margin: $space-24 0;
+    padding: $space-12 $space-12;
+}
+
+.formTitle {
+    margin-bottom: $space-24;
+    text-align: center;
+}
+
+.formFooter {
+    margin-top: $space-24;
+    text-align: right;
+}
+
+.formGroup {
+    padding: $space-24 0;
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    top: 40px;
+    left: $space-8;
+    background-color: $white;
+    padding: 0.2rem $space-4;
+    color: $gray-500;
+    font-size: $typography-16;
+    transition: all 0.3s ease;
+}
+
+.input,
+.textarea {
+    border: 0.1rem solid $gray-500;
+    border-radius: $space-4;
+    // fix for chrome
+    outline: none;
+    padding: 0 $space-12;
+    height: $space-56;
+    width: 100%;
+    transition: border 0.3s ease;
+    color: $gray-900;
+}
+
+.textarea {
+    padding: $space-16 $space-12;
+    resize: none;
+}
+
+.input:hover,
+.textarea:hover {
+    border: 0.1rem solid $black;
+}
+
+.input:focus,
+.textarea:focus {
+    border: 0.2rem solid $primary;
+}
+
+.help {
+    font-size: $typography-12;
+    color: $gray-500;
+    margin: 0 $space-12;
+}
+
+.error > .input {
+    border: 0.2rem solid $red;
+}
+
+.error > .label,
+.error > .help {
+    color: $red !important;
+}
+
+.input:focus + .label,
+.input:valid + .label,
+.labelTop,
+.textarea:focus + label,
+.textarea:valid + .label {
+    top: $space-16;
+    left: $space-8;
+    font-size: $typography-12;
+    color: $primary;
+}
+
+.input:not(:focus) + .label,
+.textarea:not(:focus) + .label {
+    color: $gray-700;
+}
+
+// fix chrome yellowing forms autocomplete
+.input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 100px white inset;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+.footer {
+    margin-top: $space-24;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

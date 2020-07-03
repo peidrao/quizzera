@@ -1,0 +1,38 @@
+@import '../../../styles/global-styles.scss';
+
+.headerFixed {
+    position: fixed;
+    width: 100%;
+    grid-area: header;
+    background-color: $primary;
+    color: $white;
+    box-shadow: $box-shadow-12dp;
+    font-size: $typography-24;
+    padding: $space-12;
+    z-index: 1;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.margin {
+    margin-right: $space-24;
+}
+
+.titulo {
+    font-size: 2rem;
+    transition: opacity 0.3s;
+}
+
+.titulo:hover {
+    color: #6b0315 !important;
+    opacity: 0.5;
+    cursor: pointer;
+}

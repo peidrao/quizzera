@@ -1,0 +1,43 @@
+@import "../../../styles/global-styles.scss";
+
+// button small - 
+// button large - $space-md $space-lg; 
+// button xl - $space-lg $space-xl; 
+.button {
+    border: none;
+    box-shadow: $box-shadow-2dp;
+    border-radius: $space-4;
+    padding: $space-12 $space-24;
+    background-color: $secondary;
+    color: $black;
+
+    // fix chrome
+    outline:none;
+    // fix firefox
+    border: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:active{
+    background-color: $secondary-dark;
+    box-shadow: $box-shadow-8dp;
+}
+
+.button:disabled{
+    box-shadow: none;
+    // background-color fade
+}
+
+.small{
+    padding: $space-12 $space-24; 
+}
+
+.medium{
+    padding: $space-16 $space-28;
+}
+
+.large{
+    padding: $space-24 $space-32;
+}
